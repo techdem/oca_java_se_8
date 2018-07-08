@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="390992f0-031e-4a26-b143-7142785a4fe5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/object_orientation/CastTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/object_orientation/MultiInt.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,11 +55,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CastTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CastTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/object_orientation/CastTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="595">
               <caret line="35" column="1" lean-forward="true" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MultiInt.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/object_orientation/MultiInt.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -88,6 +97,7 @@
         <option value="$PROJECT_DIR$/src/object_orientation/Dog.java" />
         <option value="$PROJECT_DIR$/src/object_orientation/UseAnimals.java" />
         <option value="$PROJECT_DIR$/src/object_orientation/CastTest.java" />
+        <option value="$PROJECT_DIR$/src/object_orientation/MultiInt.java" />
       </list>
     </option>
   </component>
@@ -146,7 +156,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Dog">
+  <component name="RunManager" selected="Application.MultiInt">
     <configuration name="Dog" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="object_orientation.Dog" />
       <module name="oca_java_se_8" />
@@ -169,8 +179,8 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="TestAdder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="object_orientation.TestAdder" />
+    <configuration name="MultiInt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="object_orientation.MultiInt" />
       <module name="oca_java_se_8" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -180,8 +190,8 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="TestAnimals" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="object_orientation.TestAnimals" />
+    <configuration name="TestAdder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="object_orientation.TestAdder" />
       <module name="oca_java_se_8" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -244,19 +254,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.TestAnimals" />
       <item itemvalue="Application.Dog2" />
       <item itemvalue="Application.TestAdder" />
       <item itemvalue="Application.UseAnimals" />
       <item itemvalue="Application.Dog" />
+      <item itemvalue="Application.MultiInt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MultiInt" />
         <item itemvalue="Application.Dog" />
         <item itemvalue="Application.UseAnimals" />
         <item itemvalue="Application.TestAdder" />
         <item itemvalue="Application.Dog2" />
-        <item itemvalue="Application.TestAnimals" />
       </list>
     </recent_temporary>
   </component>
@@ -352,6 +362,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="35" column="1" lean-forward="true" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/object_orientation/MultiInt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
         </state>
       </provider>
     </entry>
