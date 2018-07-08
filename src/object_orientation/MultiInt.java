@@ -26,4 +26,29 @@ class MultiInt implements I1, I2 {  // needs to override
 
         return 3;
     }
+
+    public Animal getAnimal() {
+
+        return new Horse();  // Assume Horse extends animal
+    }
+
+    public Object getObject() {
+
+        int[] nums = {1,2,3};
+        return nums;  // Return an int array, which is still an object
+    }
+
+    public interface Chewable { }
+
+    public class Gum implements Chewable { }
+
+    public class TestChewable {
+
+        // Metgid with an interface return type
+
+        public Chewable getChewable() {
+
+            return new Gum();  // Return interface implementer
+        }
+    }
 }
