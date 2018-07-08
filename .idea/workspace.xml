@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="390992f0-031e-4a26-b143-7142785a4fe5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/object_orientation/TestAdder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/object_orientation/UseAnimals.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/oca_java_se_8/object_orientation/Animal2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/oca_java_se_8/object_orientation/Animal2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/oca_java_se_8/object_orientation/Dog2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object_orientation/Dog2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object_orientation/Dog.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,8 +32,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dog2.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/object_orientation/Dog2.java">
+      <file leaf-file-name="Dog.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/object_orientation/Dog.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
               <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
@@ -37,11 +41,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestAdder.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TestAdder.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/object_orientation/TestAdder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="510">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UseAnimals.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/object_orientation/UseAnimals.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="29" column="1" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -67,6 +80,8 @@
         <option value="$PROJECT_DIR$/src/object_orientation/Dog2.java" />
         <option value="$PROJECT_DIR$/src/object_orientation/Adder.java" />
         <option value="$PROJECT_DIR$/src/object_orientation/TestAdder.java" />
+        <option value="$PROJECT_DIR$/src/object_orientation/Dog.java" />
+        <option value="$PROJECT_DIR$/src/object_orientation/UseAnimals.java" />
       </list>
     </option>
   </component>
@@ -125,7 +140,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TestAdder">
+  <component name="RunManager" selected="Application.Dog">
+    <configuration name="Dog" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="object_orientation.Dog" />
+      <module name="oca_java_se_8" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="object_orientation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration name="Dog2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="object_orientation.Dog2" />
       <module name="oca_java_se_8" />
@@ -159,8 +185,8 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="TestShapes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="object_orientation.TestShapes" />
+    <configuration name="UseAnimals" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="object_orientation.UseAnimals" />
       <module name="oca_java_se_8" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -212,17 +238,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.TestShapes" />
       <item itemvalue="Application.TestAnimals" />
       <item itemvalue="Application.Dog2" />
       <item itemvalue="Application.TestAdder" />
+      <item itemvalue="Application.UseAnimals" />
+      <item itemvalue="Application.Dog" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Dog" />
+        <item itemvalue="Application.UseAnimals" />
         <item itemvalue="Application.TestAdder" />
         <item itemvalue="Application.Dog2" />
         <item itemvalue="Application.TestAnimals" />
-        <item itemvalue="Application.TestShapes" />
       </list>
     </recent_temporary>
   </component>
@@ -245,14 +273,14 @@
     <layout>
       <window_info anchor="right" id="Palette" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.32972136" />
+      <window_info anchor="bottom" id="Messages" weight="0.32972136" />
       <window_info anchor="right" id="Palette&#9;" />
       <window_info id="Image Layers" />
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32972136" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32972136" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
@@ -283,9 +311,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/object_orientation/TestShapes.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/object_orientation/TestAnimals.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
@@ -293,7 +318,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/object_orientation/Dog2.java">
+    <entry file="file://$PROJECT_DIR$/src/object_orientation/TestShapes.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/object_orientation/Dog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
@@ -302,8 +330,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/object_orientation/TestAdder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="510">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/object_orientation/UseAnimals.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="1" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
         </state>
       </provider>
     </entry>

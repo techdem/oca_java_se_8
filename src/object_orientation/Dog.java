@@ -8,14 +8,14 @@ class Animal2 {
     }
 }
 
-class Dog2 extends Animal2 {
+class Dog extends Animal2 {
 
     public void eat() { /* no Exceptions */ }
 
     public static void main(String[] args) {
 
-        Animal2 a = new Dog2();
-        Dog2 d = new Dog2();
+        Animal2 a = new Dog();
+        Dog d = new Dog();
         d.eat();  // ok
         //a.eat();  // compiler error - unreported exception
     }
