@@ -1,18 +1,18 @@
 1. Given:
 
- 1.  public class $hEllo_wOrld {
- 2.    public static void Main(String[] args) {
- 3.     System.out.printf(" Prints %s...", args[1]);
- 4.    }
- 5.    public static void main(String[] args) {
- 6.      main(new String[][]{ {"Hello", "World"} , {"Hello World", "."} });
- 7.    }
- 8.    public static void main(String[] args[]) {
- 9.      System.out.printf("Doesn't print %s%s", args[0][0], args[1][1]);
-10.      Main(new String[]{"\n", "World"});
-11.      main(new String[][]{{"Hello World"}});
-12.    }
-13.  }
+ 1. public class $hEllo_wOrld {
+ 2.   public static void Main(String[] args) {
+ 3.    System.out.printf(" Prints %s...", args[1]);
+ 4.   }
+ 5.   public static void main(String[] args) {
+ 6.     main(new String[][]{ {"Hello", "World"} , {"Hello World", "."} });
+ 7.   }
+ 8.   public static void main(String[] args[]) {
+ 9.     System.out.printf("Doesn't print %s%s", args[0][0], args[1][1]);
+10.     Main(new String[]{"\n", "World"});
+11.     main(new String[][]{{"Hello World"}});
+12.   }
+13. }
 
 What is the result? (Choose all that apply.)
 
@@ -26,25 +26,25 @@ F. Compilation fails with an error on line 11
 
 2. Given:
 
- 1.  abstract interface Interface {
- 2.    public static void main(String[] args) {
- 3.      System.out.println("Did you enjoy the first question?");
- 4.    }
- 5.  }
- 6.  class Class {
- 7.    public static void main(String[] args) {
- 8.      if(args.length > 0) {
- 9.        args[0] = "Here's another one!";
-10.        System.out.println(args[0]);
-11.      }
-12.    }
-13.  }
-14.  public class MyQuestion2 extends Class implements Interface {
-15.    public void main(String args) {
-16.      super.main(new String[]{"At least it's the last one"});
-17.      this.main("Or is it?");
-18.    }
-19.  }
+ 1. abstract interface Interface {
+ 2.   public static void main(String[] args) {
+ 3.     System.out.println("Did you enjoy the first question?");
+ 4.   }
+ 5. }
+ 6. class Class {
+ 7.   public static void main(String[] args) {
+ 8.     if(args.length > 0) {
+ 9.       args[0] = "Here's another one!";
+10.       System.out.println(args[0]);
+11.     }
+12.   }
+13. }
+14. public class MyQuestion2 extends Class implements Interface {
+15.   public void main(String args) {
+16.     super.main(new String[]{"At least it's the last one"});
+17.     this.main("Or is it?");
+18.   }
+19. }
 
 What is the result?
 
@@ -52,13 +52,85 @@ A. Compilations succeeds
 B. Did you enjoy the first question?
 C. Here's another one
 D. At least it's the last one
-E. Or is it?
+E. Infinite loop
 F. Compilation fails
 
 
 3. Given:
 
+ 1. abstract interface Rememberable {
+ 2.   public static void main(String[] args) {
+ 3.     System.out.println("Remember me?");
+ 4.   }
+ 5.   default Rememberable rememberable() {
+ 6.     return new MyQuestion3();
+ 7.   }
+ 8. }
+ 9. public class MyQuestion3 implements Rememberable {
+10.   public MyQuestion3() {
+11.     super();
+12.     Rememberable.main(new String[]{"How are things?"});
+13.   }
+14.   public static void main(String[] args) {
+15.     Rememberable rememberable = new MyQuestion3();
+16.     rememberable = rememberable.rememberable();
+17.   }
+18. }
 
+What is the result?
+
+A. Compilation succeeds
+B. Remember me?
+C. Remember me?
+   How are things?
+D. Remember me?
+   Remember me?
+E. How are things?
+F. Compilation fails
+
+
+4. Given:
+
+ 1. public class MyQuestions {
+ 2.   public static int i;
+ 3.   public static void main(String[] args) {
+ 4.     do {
+ 5.       i--;
+ 6.       System.out.println("looping");
+ 7.     } while(Calculator.thisIsEasy(++i) < 10);
+ 8.   }
+ 9. }
+10. class Calculator {
+11.   static int thisIsEasy(int j) {
+12.     for(; j < MyQuestions.i++;) {
+13.       ++j;
+14.     }
+15.     return --j;
+16.   }
+17. }
+
+What is the result?
+
+A. Compilation fails
+B. 'looping' is printed once
+C. 'looping' is printed nine times
+D. 'looping' is printed ten times
+E. 'looping' is printed eleven times
+F. 'looping' is printed twenty times
+
+
+5. Given:
+
+ 1.
+ 2.
+ 3.
+ 4.
+ 5.
+ 6.
+ 7.
+ 8.
+ 9.
+10.
 
 What is the result? (Choose all that apply.)
 
@@ -69,8 +141,43 @@ D.
 E.
 F.
 
+
+
+
+
 Answers:
 
-1. C is correct.
-2. A is correct.
-3. 
+1.
+
+A is incorrect : the first print statement is in the overloaded main.
+B is incorrect : overloaded main calls another two methods.
+C is  correct  : program fails when the overloaded method calls itself and tries to print args[1][1]
+D is incorrect : overloaded main is called correctly.
+E is incorrect : "Main" method is called correctly.
+F is incorrect : recursive call is valid although infinite.
+
+2.
+
+A is  correct  : the java main method runs from "Class" and it doesn't do anything
+B is incorrect : the java main method from "Interface" is never called
+C is incorrect : the java main method from "Class" doesn't receive any arguments
+D is incorrect : the main method from "MyQuestion2" is never called
+E is incorrect : the main method from "MyQuestion2" is never called
+F is incorrect : everything is visible and there are no exceptions
+
+3.
+
+A is incorrect : compilation succeeds and the program runs
+B is incorrect : the java main method in the interface is called twice
+C is incorrect : the String passed into the interface method is never used
+D is  correct  : the constructor of the "MyQuestion3" class is executed twice
+E is incorrect : the String passed into the interface method is never used
+F is incorrect : everything is visible and there are no exceptions
+
+4.
+
+A is
+
+5.
+
+A is
