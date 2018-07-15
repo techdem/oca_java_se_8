@@ -176,7 +176,12 @@ F is incorrect : everything is visible and there are no exceptions
 
 4.
 
-A is
+A is incorrect : everything is visible and accessed from a static context
+B is incorrect : the while loop executes more than once
+C is incorrect : the while loop checks for the value of j
+D is  correct  : j stores and returns the value of i when the function is called
+E is incorrect : i is incremented twice every time "thisIsEasy" is called
+F is incorrect : i is decremented once before "looping" is printed
 
 5.
 
