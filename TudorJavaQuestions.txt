@@ -121,6 +121,8 @@ F. 'looping' is printed twenty times
 
 5. Given:
 
+(covariant returns, initialiser blocks, super() and this(), interface static members and methods, class static methods and members)
+
  1.
  2.
  3.
@@ -186,3 +188,8 @@ F is incorrect : i is decremented once before "looping" is printed
 5.
 
 A is
+B is
+C is
+D is
+E is
+F is
