@@ -9,14 +9,9 @@ public class MyQuestion4 {
 }
 class Calculator {
   static int thisIsEasy(int j) {
-    System.out.println("before loop i: " + MyQuestion4.i);
-    System.out.println("before loop j: " + j);
     for(; j < MyQuestion4.i++;) {
-      System.out.println("loop doesn't run " + j);
       ++j;
     }
-    System.out.println("after loop i: " + MyQuestion4.i);
-    System.out.println("after loop j: " + j);
-    return j--;
+    return --j;
   }
 }
