@@ -121,27 +121,36 @@ F. 'looping' is printed twenty times
 
 5. Given:
 
-(covariant returns, initialiser blocks, super() and this(), interface static members and methods, class static methods and members)
+(initialiser blocks, super() and this(), interface static members and methods, class static methods and members)
 
- 1.
- 2.
- 3.
- 4.
- 5.
- 6.
- 7.
- 8.
- 9.
-10.
+ 1. interface MyQuestionS {
+ 2.   static void MyQuestionS() {
+ 3.     final int MyQuestionS;
+ 4.   }
+ 5.   { MyQuestionS = 5; }
+ 6. }
+ 7. public class MyQuestion5 {
+ 8.   static int MyQuestion5;
+ 9.   public static void main(String[] args) {
+10.     int MyQuestion5;
+11.   }
+12.   { MyQuestion5 = 5; MyQuestionS.MyQuestionS(); }
+13.   MyQuestion5(int MyQuestion5) {
+14.     this();
+15.   }
+16.   MyQuestion5() {
+17.     new MyQuestion5().MyQuestion5 = 5;
+18.   }
+19. }
 
 What is the result? (Choose all that apply.)
 
-A.
-B.
-C.
-D.
-E.
-F.
+A. Compilation fails with an error on line 3
+B. Compilation fails with an error on line 5
+C. Compilation fails with an error on line 12
+D. Compilation fails with an error on line 14
+E. Compilation fails with an error on line 17
+F. Compilation succeeds
 
 
 
@@ -187,9 +196,9 @@ F is incorrect : i is decremented once before "looping" is printed
 
 5.
 
-A is
-B is
-C is
-D is
-E is
-F is
+A is incorrect : a variable must be final in a static interface method
+B is  correct  : an interface cannot have an initialiser
+C is incorrect : initialiser block calls the interface static method correctly
+D is incorrect : overloaded constructor calls default constructor
+E is incorrect : default constructor accesses the static variable
+F is incorrect : compilation fails
