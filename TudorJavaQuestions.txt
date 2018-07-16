@@ -121,8 +121,6 @@ F. 'looping' is printed twenty times
 
 5. Given:
 
-(initialiser blocks, super() and this(), interface static members and methods, class static methods and members)
-
  1. interface MyQuestionS {
  2.   static void MyQuestionS() {
  3.     final int MyQuestionS;
