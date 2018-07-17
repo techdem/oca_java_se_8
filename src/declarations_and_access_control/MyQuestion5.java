@@ -1,8 +1,10 @@
+package declarations_and_access_control;
+
 interface MyQuestionS {
 	static void MyQuestionS() {
 		final int MyQuestionS;
 	}
-	{ MyQuestionS = 5; }
+	// { MyQuestionS = 5; }
 }
 public class MyQuestion5 implements MyQuestionS {
 	static int MyQuestion5;
