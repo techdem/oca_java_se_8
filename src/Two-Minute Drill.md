@@ -440,3 +440,67 @@
 
 # Strings, Arrays, ArrayLists, Dates and Lambdas
 
+#### Using String and StringBuilder (OCA Objectives 9.2 and 9.1)
+- [ ] *String* objects are immutable, and *String* reference variables are not.
+- [ ] If you create a new *String* without assigning it, it will be lost to your program.
+- [ ] If you redirect a *String* reference to a new *String*, the old *String* can be lost.
+- [ ] *String* methods use zero-based indexes, except for the second argument of *substring()*.
+- [ ] The *String* class is *final* - it cannot be extended.
+- [ ] When the JVM finds a *String* literal, it is added to the *String* literal pool.
+- [ ] Strings have a *method* called *length()* - arrays have an *attribute* named *length*.
+- [ ] *StringBuilder* objects are mutable - they can change without creating a new object.
+- [ ] *StringBuilder* methods act on the invoking object, and objects can change without an explicit assignment in the statement.
+- [ ] Remember that chained methods are evaluated from left to right.
+- [ ] *String* methods to remember: *charAt()*, *concat()*, *equalsIgnoreCase()*, *length()*, *replace()*, *substring()*, *toLowerCase()*, *toString()*, *toUpperCase()*, and *trim()*.
+- [ ] *StringBuilder* methods to remember: *append()*, *delete()*, *insert()*, *reverse()*, and *toString()*.
+
+#### Manipulating Calendar Data (OCA Objective 9.3)
+- [ ] On the exam all the objects created using the calendar classes are immutable, but their reference variables are not.
+- [ ] If you create a new calendar object without assigning it, it will be lost to your program.
+- [ ] If you redirect a calendar reference to a new calendar object, the old calendar object can be lost.
+- [ ] All of the objects created using the exam's calendar classes must be created using factory methods (e.g., *from()*, *now()*, *of()*, *parse()* ); the keyword *new* is not allowed.
+- [ ] The *until()* and *between()* methods perform complex calculations that determine the amount of time between the values of two calendar objects.
+- [ ] The *DateTimeFormatter* class uses the *parse()* method to parse input Strings into valid calendar objects.
+- [ ] The *DateTimeFormatter* class uses the *format()* method to format calendar objects into beautifully formed Strings.
+
+#### Using Arrays (OCA Objectives 4.1 and 4.2)
+- [ ] Arrays can hold primitives or objects, but the array itself is always an object.
+- [ ] When you declare an array, the brackets can be to the left or right of the name.
+- [ ] It is never legal to include the size of an array in the declaration.
+- [ ] You must include the size of an array when you construct it (using *new*) unless you are creating an anonymous array.
+- [ ] Elements in an array of objects are not automatically created, although primitive array elements are given default values.
+- [ ] You'll get a *NullPointerException* if you try to use an array element in an object array if that element foes not refer to a real object.
+- [ ] Arrays are indexed beginning with zero.
+- [ ] An *ArrayIndexOutOfBoundsException* occurs if you use a bad index value.
+- [ ] Arrays have a *length* attribute whose value is the number of array elements.
+- [ ] The last index you can access is always one less than the length of the array.
+- [ ] Multidimensional arrays are just arrays of arrays.
+- [ ] The dimensions in a multidimensional array can have different lengths.
+- [ ] An array of primitives can accept any value that can be promoted implicitly to the array's declared type - for example, a *byte* variable can go in an *int* array.
+- [ ] An array of objects can hold any object that passes the IS-A (or *instanceof*) test for the declared type of the array. For example, if *Horse* extends *Animal*, then a *Horse* object can go into an *Animal* array.
+- [ ] If you assign an array to a previously declared array reference, the array you're assigning must be the same dimension as the reference you're assigning it to. You can assign an array of one type to a previously declared array reference of one of its supertypes. For example, a *Honda* array can be assigned to an array declared as type *Car* (assuming *Honda* extends *Car*).
+
+#### Using ArrayList (OCA Objective 9.4)
+- [ ] *ArrayLists* allow you to resize your list and make insertions and deletions to your list far more easily than arrays.
+- [ ] *ArrayLists* are ordered by default. When you use the *add()* method with no index argument, the new entry will be appended to the end of the *ArrayList*.
+- [ ] For the OCA 8 exam, the only *ArrayList* declarations you need to know are of this form:
+    ##### ArrayList<type> myList = new ArrayList<type>();
+    ##### List<type> myList2 = new ArrayList<type>();  // polymorphic
+    ##### List<type> myList3 = new ArrayList<>();  // diamond operator, polymorphic optional
+- [ ] *ArrayLists* can hold only objects, not primitives, but remember that autoboxing can make it look like you're adding primitives to an *ArrayList* when, in fact, you're adding a wrapper object version of a primitive.
+- [ ] An *ArrayList's* index starts at 0.
+- [ ] *ArrayLists* can have duplicate entries. Note: Determining whether two objects are duplicates is trickier than it seems and doesn't come up until the OCP 8 exam.
+- [ ] *ArrayList* methods to remember: *add(element)*, *add(index, element)*, *clear()*, *contains(object)*, *get(index)*, *indexOf(object)*, *remove(index)*, *remove(object)*, and *size()*.
+
+#### Encapsulating Reference Variables (OCA Objective 6.5)
+- [ ] If you want to encapsulate mutable objects like *StringBuilders* or arrays or *ArrayLists*, you cannot return a reference to these objects; you must first make a copy of the object and return a reference to the copy.
+- [ ] Any class that has a method that returns a reference to a mutable object is breaking encapsulation.
+
+#### Using Predicate Lambda Expressions (OCA Objective 9.5)
+- [ ] Lambdas allow you to pass bits of code from one method to another. And the receiving method can run whatever complying code it is sent.
+- [ ] While there are many types of lambdas that Java 8 supports, for this exam, the only lambda type you need to know is the *Predicate*.
+- [ ] The *Predicate* interface has a single method to implement that's called *test()*, and it takes one argument and returns a *boolean*.
+- [ ] As the *Predicate.test()* method returns a *boolean*, it can be placed (mostly?) wherever a boolean expression can go, e.g., in *if*, *while*, *do*, and ternary statements.
+- [ ] *Predicate* lambda expressions have three parts: a single argument, an arrow (->), and an expression or code block.
+- [ ] A *Predicate* lambda expression's argument can be just a variable or a type and variable together in parantheses, e.g., *(MyClass m)*.
+- [ ] A *Predicate* lambda expression's body can be an expression that resolves to a boolean, OR it can be a block of statements (surrounded by curly braces) that ends with a boolean-returning *return* statement.
