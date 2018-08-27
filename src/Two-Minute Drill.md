@@ -339,3 +339,104 @@
 - [ ] The *finalize()* method is guaranteed to run once and only once before the garbage collector deletes an object.
 - [ ] The garbage collector makes no guarantees; *finalize()* may never run.
 - [ ] You can ineligible-ise an object for GC from within *finalize()*.
+
+# Operators
+
+#### Relational Operators (OCA Objectives 3.1 and 3.2)
+- [ ] Relational operators always result in a *boolean* value (true or false).
+- [ ] There are six relational operators: >, >=, <, <=, ==, and !=. The last two (== and !=) are sometimes referred to as *equality operators*.
+- [ ] When comparing characters, Java uses the Unicode value of the character as the numerical value.
+- [ ] Equality operators
+    - [ ] There are two equality operators: == and !=.
+    - [ ] Four types of things can be tested: numbers, characters, booleans, and reference variables.
+- [ ] When comparing reference variables, == returns *true* only if both references refer to the same object.
+
+#### instanceof Operator (OCA Objective 3.1)
+- [ ] *instanceof* is for reference variables only; it checks whether the object is of a particular type.
+- [ ] The *instanceof* operator can be used only to test object (or *null*) against class types that are in the same class hierarchy.
+- [ ] For interfaces, an object passes the *instanceof* test if any of its superclasses implement the interface on the right side of the *instanceof* operator.
+
+#### Arithmetic Opeartors (OCA Objective 3.1)
+- [ ] The four primary math operators are (+), subtract (-), multiply (*), and divide (/).
+- [ ] The remainder (a.k.a. modulus) operator (%) returns the remainder of a division.
+- [ ] Expressions are evaluated from left to right, unless you add parantheses, or unless some operators in the expression have higher precedence than others.
+- [ ] The *, /, and % opearators have higher precedence than + and -.
+
+#### String Concatenation Operator (OCA Objective 3.1)
+- [ ] If either operand is a *String*, the + operator concatenates the operands.
+- [ ] If both operands are numeric, the + operator adds the operands.
+
+#### Increment/Decrement Operators (OCA Objective 3.1)
+- [ ] Prefix operators (e.g. --x) run before the value is used in the expression.
+- [ ] Postfix operators (e.g., x++) run after the value is used in the expression.
+- [ ] In any expression, both operands are fully evaluated *before* the operator is applied.
+- [ ] Variables marked *final* cannot be incremented or decremented.
+
+#### Ternary (Conditional) Opearator (OCA Objective 3.3)
+- [ ] Return one of two values based on the state of its *boolean* expression.
+- [ ] Returns the value after the ? if the expression is *true*.
+- [ ] Returns the value after the : if the expression is *false*.
+
+#### Logical Operators (OCA Objective 3.1)
+- [ ] The exam covers six "logical" operators: &, |, ^, !, &&, and ||.
+- [ ] Work with two expressions (except for !) that must resolve to boolean values.
+- [ ] The && and & operators return *true* only if both operands are *true*.
+- [ ] The || and | operators return *true* if either or both operands are *true*.
+- [ ] The && and || operators are known as short-circuit operators.
+- [ ] The && operator does not evaluate the right operand if the left operand is *false*.
+- [ ] The || does not evaluate the right operand if the left operand is true.
+- [ ] The & and | operators always evaluate both operands.
+- [ ] The ^ operator (called the "logical XOR") returns *true* if exactly one operand is *true*.
+
+#### Parentheses and Operator Precedence (OCA Objective 3.1)
+- [ ] In real life, use parantheses to clarify your code, and force Java to evaluate expressions as intended.
+- [ ] For the exam, memorize Table 4-2 to determine how parantheses-free code will be evaluated.
+
+# Flow Control and Exceptions
+
+#### Writing Code Using if and switch Statements (OCA Objectives 3.3 and 3.4)
+- [ ] The only legal expression in an *if* statement is a *boolean* expression - in other words, an expression that resolves to a *boolean* or a *Boolean* reference.
+- [ ] Watch out for *boolean* assignments (=) that can be mistaken for *boolean* equality (==) tests:
+    ##### boolean x = false;
+    ##### if (x = true) { } // an assignment, so x will always be true!
+- [ ] Curly braces are optional for *if* blocks that have only one conditional statement. But watch out for misleading indentations.
+- [ ] *switch* statements can evaluate only to *enums* or the *byte*, *short*, *int*, *char*, and, as of Java 7, *String* data types. You can't say this:
+  ##### long s = 30;
+  ##### switch(s) { }
+- [ ] The *case* constant must be a literal or a compile-time constant, including an *enum* or a *String*. You cannot have a case that includes a nonfinal variable or a range of values.
+- [ ] If the condition in a *switch* statement matches a *case* constant, execution will run through all code in the *switch* following the matching *case* statement until a *break* statement or the end of the *switch* statement is encountered. In other words, the matching *case* is just the entry point into the *case* block, but unless there's a *break* statement, the matching *case* is not the only case code that runs.
+- [ ] The *default* keyword should be used in a *switch* statement if you want to run some code when none of the *case* values match the conditional value.
+- [ ] The *default* block can be located anywhere in the *switch* block, so if no preceding *case* matches, the *default* block will be entered; if the *default* does not contain a *break*, then code will continue to execute (fall-through) to the end of the *switch* or until the *break* statement is encountered.
+  
+#### Writing Code Using Loops (OCA Objectives 5.1, 5.2, 5.3, and 5.4)
+- [ ] A basic *for* statement has three parts: declaration and/or initialization, boolean evaluation, and the iteration expression.
+- [ ] If a variable is incremented or evaluated within a basic *for* loop, it must be declared before the loop or within the *for* loop declaration.
+- [ ] A variable declared (not just initialized) within the basic *for* loop declaration cannot be accessed outside the *for* loop - in other words, code below the *for* loop won't be able to use the variable.
+- [ ] You can initialize more than one variable of the same type in the first part of the basic *for* loop declaration; each initialization must be comma separated.
+- [ ] An enhanced *for* statement (new as of Java 5) has two parts: the *declaration* and the *expression*. It is used only to loop through arrays or collections.
+- [ ] With enhanced *for*, the *expression* is the array or collection through which you want to loop.
+- [ ] With an enhanced *for*, the *declaration* is the block variable, whose type is compatible with the elements of the array or collection, and that variable contains the value of the element for the given iteration.
+- [ ] Unlike with C, you cannot use a number or anything that does not evaluate to a *boolean* value as a condition for an *if* statement or looping construct. You can't, for example, say *if(x)*, unless *x* is a *boolean* variable.
+- [ ] The *do* loop will **always** enter the body of the loop at least once.
+
+#### Using break and continue (OCA Objective 5.5)
+- [ ] An unlabeled *break* statement will cause the current iteration of the innermost loop to stop and the line of code following the loop to run.
+- [ ] An unlabeled *continue* statement will cause the current iteration of the innermost loop to stop, the condition of that loop to be checked, and if the condition is met, the loop to run again.
+- [ ] If the *break* statement or the *continue* statement is labeled, it will cause a similar action to occur on the labeled loop, not the innermost loop.
+
+#### Handling Exceptions (OCA Objectives 8.2, 8.2, 8.3, 8.4, and 8.5)
+- [ ] Some of the benefits of Java's exception-handling features include organized error-handling code, easy error detection, keeping exception-handling code separate from other code, and the ability to reuse exception-handling code for a range of issues.
+- [ ] Exceptions come in two flavors: checked and unchecked.
+- [ ] Checked exceptions include all subtypes of *Exception*, excluding classes that extend *RuntimeException*.
+- [ ] Checked exceptions are subject to the handle or declare rule; any method that might throw a checked exception (including methods that invoke methods that can throw a checked exception) must either declare the exception using *throws* or handle the exception with an appropriate *try/catch*.
+- [ ] Subtypes of *Error* or *RuntimeException* are unchecked, so the compiler doesn't enforce the handle or declare rule. You're free to handle them or to declare them, but the compiler doesn't care one way or the other.
+- [ ] A *finally* block will always be invoked, regardless of whether an exception is thrown or caught in its try/catch.
+- [ ] The only exception to the *finally*-will-always-be-called rule is that a *finally* will not be invoked if the JVM shuts down. That could happen if code from the *try* or *catch* blocks call *System.exit()*.
+- [ ] Just because *finally* is invoked does not mean it will complete. Code in the *finally* block could itself raise an exception or issue a *System.exit()*.
+- [ ] Uncaught exceptions propagate back through the call stack, starting from the method where the exception is thrown and ending with either the first method that has a corresponding catch for that exception type or a JVM shutdown (which happens if the exception gets to *main()* and *main()* is "ducking" the exception by declaring it).
+- [ ] You can almost always create your own exceptions by extending *Exception* or one of its checked exception subtypes. Such an exception will then be considered a checked exception by the compiler. (In other words, it's rare to extend *RuntimeException*).
+- [ ] All *catch* blocks must be ordered from most specific to most general. If you have a *catch* clause for both *IOException* and *Exception*, you must put the *catch* for *IOException* first in your code. Otherwise, the *IOException* would be caught by *catch(Exception e)*, because a *catch* argument can catch the specified exception or any of its subtypes!
+- [ ] Some exceptions are created by programmers and some by the JVM.
+
+# Strings, Arrays, ArrayLists, Dates and Lambdas
+
