@@ -14,5 +14,12 @@ public class References {
 
         x = x.toLowerCase();                // create a new String, assigned to x
         System.out.println("x = " + x);     // the assignment causes the output: x = java rules!
+
+        String s1 = "spring ";
+        String s2 = s1 + "summer ";
+        s1.concat("fall ");
+        s2.concat(s1);
+        s1 += "winter ";
+        System.out.println(s1 + " " + s2);
     }
 }
