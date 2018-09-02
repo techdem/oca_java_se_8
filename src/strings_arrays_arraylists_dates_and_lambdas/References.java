@@ -21,5 +21,8 @@ public class References {
         s2.concat(s1);
         s1 += "winter ";
         System.out.println(s1 + " " + s2);
+
+        String s = "abc";                       // create one String object and one reference variable
+        String sn = new String("abc");   // creates two objects, and one reference variable
     }
 }
