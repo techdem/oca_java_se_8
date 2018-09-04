@@ -12,7 +12,7 @@ class UseBoxing {
         Integer i4 = 10;
         if(i3 == i4) System.out.println("same object");
         if(i3.equals(i4)) System.out.println("meaningfully equal");
-        
+
         UseBoxing u = new UseBoxing();
         u.go(5);
     }
