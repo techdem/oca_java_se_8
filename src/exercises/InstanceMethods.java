@@ -25,6 +25,7 @@ class SubClass extends SuperClass {
         System.out.println("instance sub method");
     }
 }
+
 public class InstanceMethods {
     public static void main(String[] args) {
         SuperClass sc = new SubClass();
