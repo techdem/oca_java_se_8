@@ -31,3 +31,16 @@ class Vark {
         System.out.println(b[1]);
     }
 }
+
+class Plant {
+    String getName() { return "plant"; }
+    Plant getType() { return this; }
+}
+
+class Flower extends Plant {
+    //Flower getType() { return this; }
+    //String getType() { return "this" }
+    Tulip getType() { return new Tulip(); }
+}
+
+class Tulip extends Flower {}
