@@ -95,3 +95,20 @@ class Class implements Interface {
         System.out.println(Interface.super.hashCode());
     }
 }
+
+interface Runnable {}
+interface Observer {}
+
+class A implements Runnable {}
+
+class B extends A implements Observer {
+
+    A a = new A();
+    B b = new B();
+
+    //Object o = a; Runnable r = o; // Incompatible types
+    //Object o = a; Runnable r = (Runnable) o; // No problem
+    //Object o = a; Observer ob = (Observer) o; // Compiles but fails at runtime
+    //Object o = b; Observer o2 = o; // Incompatible types
+    Object o = b; Runnable r = b;
+}
