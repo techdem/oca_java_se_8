@@ -193,7 +193,7 @@
 - [ ] The reference variable's type (not the object's type) determines which methods can be called!
 - [ ] Polymorphic method invocations apply only to overriden *instance* methods.
 
-#### Overriding and OVerloading (OCA Objectives 6.1 and 7.2)
+#### Overriding and Overloading (OCA Objectives 6.1 and 7.2)
 - [ ] Methods can be overridden or overloaded; constructors can be overloaded but not overriden.
 - [ ] With respect to the method it overrides, the overriding method
     - [ ] Must have the same argument list
@@ -356,7 +356,7 @@
 - [ ] The *instanceof* operator can be used only to test object (or *null*) against class types that are in the same class hierarchy.
 - [ ] For interfaces, an object passes the *instanceof* test if any of its superclasses implement the interface on the right side of the *instanceof* operator.
 
-#### Arithmetic Opeartors (OCA Objective 3.1)
+#### Arithmetic Operators (OCA Objective 3.1)
 - [ ] The four primary math operators are (+), subtract (-), multiply (*), and divide (/).
 - [ ] The remainder (a.k.a. modulus) operator (%) returns the remainder of a division.
 - [ ] Expressions are evaluated from left to right, unless you add parantheses, or unless some operators in the expression have higher precedence than others.
@@ -372,7 +372,7 @@
 - [ ] In any expression, both operands are fully evaluated *before* the operator is applied.
 - [ ] Variables marked *final* cannot be incremented or decremented.
 
-#### Ternary (Conditional) Opearator (OCA Objective 3.3)
+#### Ternary (Conditional) Operator (OCA Objective 3.3)
 - [ ] Return one of two values based on the state of its *boolean* expression.
 - [ ] Returns the value after the ? if the expression is *true*.
 - [ ] Returns the value after the : if the expression is *false*.
